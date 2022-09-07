@@ -7,9 +7,13 @@ public class Main {
 				new Object[] {"Conversor de Moneda", "Conversor de Temperatura"}, "Elegir").toString();
 		
 		switch(opcionesConversor) {
-		case "Conversor de Moneda":
+		case "Conversor de Moneda": {
+			Moneda monedaUsuario = new Moneda();
 			OpcionesConversion.desplegarOpciones();
+			monedaUsuario.inputMoneda();
+			monedaUsuario.showMoneda();
 			break;
+		}
 		case "Conversor de Temperatura":
 			JOptionPane.showMessageDialog(null, "Este conversor todavía se está desarrollando :b");
 			break;
