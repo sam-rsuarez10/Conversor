@@ -3,10 +3,23 @@ import javax.swing.JOptionPane;
 
 public class Moneda {
 	private double valorMoneda;
-	
+	private String tipoMoneda;
+	private String tipoMonedaConvertir;
+	// Dictionary factoresConversion;
 	public Moneda(){
 		this.valorMoneda = 0;
 	}
+	
+	// setter para atributo tipo de moneda
+	public void setTipoMoneda(String tipo) {
+		this.tipoMoneda = tipo;
+	}
+	
+	// setter para atributo tipo de moneda a convertir
+	public void setMonedaConvertir(String tipo) {
+		this.tipoMonedaConvertir = tipo;
+	}
+	
 	
 	// método que recibe input del usuario de la cantidad de dinero
 	public void inputMoneda() {
@@ -31,6 +44,8 @@ public class Moneda {
 	}
 	
 	public void showMoneda() {
-		JOptionPane.showMessageDialog(null, "Posees " + this.valorMoneda);
+		JOptionPane.showMessageDialog(null, "Posees " + this.valorMoneda + " " + this.tipoMoneda);
 	}
+	
+	// public double convertir(moneda, monedaConvertir);
 }
