@@ -11,11 +11,8 @@ public class Main {
 				Moneda monedaUsuario = new Moneda();
 				// se despliegan las opciones de conversion
 				String[] unidadesMoneda = OpcionesConversion.desplegarOpciones();
-				monedaUsuario.setTipoMoneda(unidadesMoneda[0]); // se setea el tipo de moneda que posee el usuario
-				monedaUsuario.setMonedaConvertir(unidadesMoneda[1]); // se setea el tipo de moneda que se quiere convertir
-				
 				monedaUsuario.inputMoneda();
-				monedaUsuario.showMoneda();
+				monedaUsuario.convertirMoneda(unidadesMoneda[0], unidadesMoneda[1]);
 				break;
 			}
 			case "Conversor de Temperatura":
