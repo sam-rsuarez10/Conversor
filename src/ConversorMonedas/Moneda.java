@@ -8,9 +8,14 @@ import java.util.Hashtable;
 
 public class Moneda {
 	private double valorMoneda;
-	private String tipoMoneda;
-	private String tipoMonedaConvertir;
-	private Dictionary<String, Double> factoresConversion = new Hashtable<>() {{
+	//private String tipoMoneda;
+	//private String tipoMonedaConvertir;
+	private Dictionary<String, Double> factoresConversion = new Hashtable<>() {/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+	{
 		// Los factores de conversión están en base a pesos chilenos
 		put("dolares", Double.valueOf(905.48));
 		put("euros", Double.valueOf(919.29));
